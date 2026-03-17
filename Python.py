@@ -55,7 +55,7 @@ def test_tooltip(page: Page): # Test ověřuje, jestli se po najetí myší na i
 
     expect(tooltip).to_be_visible()
 
-    page.get_by_role("heading", name="Novinky")
+    page.get_by_role("heading", name="Novinky").first.hover()
 
     expect(tooltip).to_be_hidden
 
